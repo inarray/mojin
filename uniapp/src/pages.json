@@ -1,0 +1,43 @@
+{
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "午餐吃啥",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "enablePullDownRefresh": false,
+                "mp-weixin": {
+                    "navigationStyle": "default"
+                }
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "午餐吃啥外卖",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "backgroundColor": "#F8F5F2",
+        "backgroundTextStyle": "dark"
+    },
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+        }
+    },
+    "mp-weixin": {
+        "appid": "",
+        "setting": {
+            "urlCheck": false,
+            "es6": true,
+            "minified": true,
+            "postcss": true
+        },
+        "permission": {
+            "scope.userLocation": {
+                "desc": "获取您的位置信息，用于推荐附近餐饮"
+            }
+        }
+    }
+}

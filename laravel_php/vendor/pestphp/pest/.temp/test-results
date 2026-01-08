@@ -1,0 +1,1 @@
+{"version":"pest_3.5.1","defects":{"P\\Tests\\Unit\\ExampleTest::__pest_evaluable_that_true_is_true":7,"P\\Tests\\Feature\\ExampleTest::__pest_evaluable_it_returns_a_successful_response":7},"times":{"P\\Tests\\Unit\\ExampleTest::__pest_evaluable_that_true_is_true":0.037,"P\\Tests\\Feature\\ExampleTest::__pest_evaluable_it_returns_a_successful_response":0.084}}
