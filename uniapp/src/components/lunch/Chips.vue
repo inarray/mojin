@@ -38,7 +38,7 @@ function handleSelect(value: string | number) {
 
 <style lang="scss" scoped>
 .chips-container {
-    margin-bottom: 32rpx;
+    margin-bottom: 28rpx;
 
     &:last-child {
         margin-bottom: 0;
@@ -46,10 +46,10 @@ function handleSelect(value: string | number) {
 }
 
 .chips-title {
-    font-size: 26rpx;
+    font-size: 24rpx;
     font-weight: 500;
-    color: #86868b;
-    margin-bottom: 16rpx;
+    color: #7a9ab8;
+    margin-bottom: 14rpx;
 }
 
 .chips-list {
@@ -62,29 +62,36 @@ function handleSelect(value: string | number) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16rpx 28rpx;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 20rpx;
-    transition: all 0.3s ease;
+    padding: 14rpx 26rpx;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 32rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     &.active {
-        background: #fff;
-        box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08), 0 1rpx 3rpx rgba(0, 0, 0, 0.06);
+        background: rgba(255, 255, 255, 0.85);
+        border-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4rpx 20rpx rgba(100, 150, 200, 0.2),
+                    inset 0 1rpx 0 rgba(255, 255, 255, 0.9);
 
         .chip-text {
-            color: #1d1d1f;
+            color: #2c3e50;
             font-weight: 600;
         }
     }
 
     &:not(.active):active {
         transform: scale(0.96);
+        background: rgba(255, 255, 255, 0.55);
     }
 }
 
 .chip-text {
     font-size: 26rpx;
-    color: #86868b;
+    color: #6a8caa;
     white-space: nowrap;
+    font-weight: 500;
 }
 </style>

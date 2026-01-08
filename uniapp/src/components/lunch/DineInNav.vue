@@ -106,20 +106,21 @@ function handleOpenMap(keyword: string) {
 
 <style lang="scss" scoped>
 .dinein-nav-container {
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-radius: 20rpx;
-    padding: 24rpx;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    border-radius: 24rpx;
+    padding: 22rpx;
     margin-bottom: 20rpx;
-    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+    border: 0.5rpx solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4rpx 24rpx rgba(100, 150, 200, 0.1);
 }
 
 .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20rpx;
+    margin-bottom: 18rpx;
 }
 
 .header-left {
@@ -128,36 +129,38 @@ function handleOpenMap(keyword: string) {
 }
 
 .section-icon {
-    font-size: 26rpx;
+    font-size: 24rpx;
     margin-right: 8rpx;
 }
 
 .section-title {
-    font-size: 30rpx;
+    font-size: 28rpx;
     font-weight: 600;
-    color: #1d1d1f;
+    color: #2c3e50;
 }
 
 .section-desc {
-    font-size: 22rpx;
-    color: #86868b;
-    background: rgba(0, 0, 0, 0.04);
-    padding: 6rpx 14rpx;
+    font-size: 20rpx;
+    color: #7a9ab8;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 6rpx 12rpx;
     border-radius: 10rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.6);
 }
 
 .keywords-list {
-    margin-bottom: 16rpx;
+    margin-bottom: 14rpx;
 }
 
 .keyword-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20rpx;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 14rpx;
-    margin-bottom: 12rpx;
+    padding: 18rpx;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16rpx;
+    margin-bottom: 10rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.5);
 
     &:last-child {
         margin-bottom: 0;
@@ -165,9 +168,9 @@ function handleOpenMap(keyword: string) {
 }
 
 .keyword-text {
-    font-size: 28rpx;
+    font-size: 26rpx;
     font-weight: 500;
-    color: #1d1d1f;
+    color: #2c3e50;
 }
 
 .keyword-actions {
@@ -178,19 +181,20 @@ function handleOpenMap(keyword: string) {
 .action-btn {
     display: flex;
     align-items: center;
-    padding: 10rpx 18rpx;
-    border-radius: 18rpx;
+    padding: 10rpx 16rpx;
+    border-radius: 16rpx;
 
     &.copy {
-        background: rgba(0, 0, 0, 0.04);
+        background: rgba(255, 255, 255, 0.6);
+        border: 0.5rpx solid rgba(255, 255, 255, 0.8);
 
         .btn-text {
-            color: #86868b;
+            color: #7a9ab8;
         }
     }
 
     &.map {
-        background: #34c759;
+        background: #4abe5e;
 
         .btn-icon {
             margin-right: 4rpx;
@@ -202,30 +206,30 @@ function handleOpenMap(keyword: string) {
     }
 
     &:active {
-        opacity: 0.8;
+        opacity: 0.85;
         transform: scale(0.96);
     }
 }
 
 .btn-icon {
-    font-size: 20rpx;
+    font-size: 18rpx;
 }
 
 .btn-text {
-    font-size: 24rpx;
+    font-size: 22rpx;
     font-weight: 500;
 }
 
 .tip-row {
     display: flex;
     align-items: flex-start;
-    padding: 14rpx 18rpx;
-    background: rgba(255, 204, 0, 0.1);
+    padding: 12rpx 16rpx;
+    background: rgba(255, 220, 100, 0.15);
     border-radius: 12rpx;
 }
 
 .tip-icon {
-    font-size: 20rpx;
+    font-size: 18rpx;
     margin-right: 8rpx;
     margin-top: 2rpx;
 }
@@ -233,7 +237,7 @@ function handleOpenMap(keyword: string) {
 .tip-text {
     flex: 1;
     font-size: 22rpx;
-    color: #86868b;
+    color: #8a7a55;
     line-height: 1.5;
 }
 </style>

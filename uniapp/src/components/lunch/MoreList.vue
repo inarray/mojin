@@ -92,63 +92,66 @@ function handleShowMore() {
 
 <style lang="scss" scoped>
 .more-list-container {
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-radius: 20rpx;
-    padding: 24rpx;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    border-radius: 24rpx;
+    padding: 22rpx;
     margin-bottom: 20rpx;
-    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+    border: 0.5rpx solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4rpx 24rpx rgba(100, 150, 200, 0.1);
 }
 
 .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20rpx;
+    margin-bottom: 18rpx;
 }
 
 .section-title {
-    font-size: 30rpx;
+    font-size: 28rpx;
     font-weight: 600;
-    color: #1d1d1f;
+    color: #2c3e50;
 }
 
 .refresh-btn {
     display: flex;
     align-items: center;
-    padding: 10rpx 18rpx;
-    background: rgba(0, 0, 0, 0.04);
-    border-radius: 16rpx;
+    padding: 8rpx 16rpx;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.6);
 
     &:active {
-        background: rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.7);
     }
 }
 
 .refresh-icon {
-    font-size: 20rpx;
+    font-size: 18rpx;
     margin-right: 6rpx;
 }
 
 .refresh-text {
-    font-size: 24rpx;
-    color: #86868b;
+    font-size: 22rpx;
+    color: #7a9ab8;
     font-weight: 500;
 }
 
 .list-wrapper {
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 14rpx;
-    padding: 4rpx 18rpx;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16rpx;
+    padding: 4rpx 16rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.5);
 }
 
 .list-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18rpx 0;
-    border-bottom: 0.5rpx solid rgba(0, 0, 0, 0.05);
+    padding: 16rpx 0;
+    border-bottom: 0.5rpx solid rgba(255, 255, 255, 0.5);
 
     &:last-child {
         border-bottom: none;
@@ -160,35 +163,35 @@ function handleShowMore() {
 }
 
 .item-title {
-    font-size: 28rpx;
+    font-size: 26rpx;
     font-weight: 500;
-    color: #1d1d1f;
+    color: #2c3e50;
     display: block;
     margin-bottom: 4rpx;
 }
 
 .item-price {
-    font-size: 24rpx;
-    color: #86868b;
+    font-size: 22rpx;
+    color: #7a9ab8;
 }
 
 .item-action {
-    margin-left: 16rpx;
+    margin-left: 14rpx;
 }
 
 .copy-btn {
-    padding: 12rpx 20rpx;
-    background: #1d1d1f;
-    border-radius: 18rpx;
+    padding: 10rpx 18rpx;
+    background: #5a8ec0;
+    border-radius: 16rpx;
 
     &:active {
-        opacity: 0.8;
+        opacity: 0.85;
         transform: scale(0.96);
     }
 }
 
 .copy-text {
-    font-size: 24rpx;
+    font-size: 22rpx;
     color: #fff;
     font-weight: 500;
 }
@@ -197,7 +200,7 @@ function handleShowMore() {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20rpx 0 8rpx;
+    padding: 18rpx 0 8rpx;
 
     &:active {
         opacity: 0.7;
@@ -205,14 +208,14 @@ function handleShowMore() {
 }
 
 .show-more-text {
-    font-size: 26rpx;
-    color: #007aff;
+    font-size: 24rpx;
+    color: #5a8ec0;
     margin-right: 6rpx;
     font-weight: 500;
 }
 
 .show-more-icon {
-    font-size: 16rpx;
-    color: #007aff;
+    font-size: 14rpx;
+    color: #5a8ec0;
 }
 </style>

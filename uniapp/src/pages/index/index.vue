@@ -173,7 +173,7 @@ const preferenceOptions = [
 const params = reactive<GenerateParams>({
     scene: 'takeout',
     taste: 'all',
-    budget: 20,
+    budget: 15,
     preference: 'normal'
 })
 
@@ -446,7 +446,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .lunch-page {
     min-height: 100vh;
-    background: linear-gradient(180deg, #f5f5f7 0%, #e8e8ed 100%);
+    background: linear-gradient(180deg, #e8f4fc 0%, #dce8f5 50%, #e5eef8 100%);
     padding-bottom: 280rpx;
 }
 
@@ -456,10 +456,10 @@ onMounted(() => {
     align-items: center;
     justify-content: space-between;
     padding: 20rpx 28rpx;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 0.5rpx solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    border-bottom: 0.5rpx solid rgba(255, 255, 255, 0.5);
 }
 
 .logo-area {
@@ -468,45 +468,46 @@ onMounted(() => {
 }
 
 .logo {
-    width: 60rpx;
-    height: 60rpx;
+    width: 56rpx;
+    height: 56rpx;
     border-radius: 14rpx;
-    margin-right: 14rpx;
+    margin-right: 12rpx;
 }
 
 .app-name {
-    font-size: 34rpx;
+    font-size: 32rpx;
     font-weight: 600;
-    color: #1d1d1f;
+    color: #2c3e50;
     letter-spacing: 0.5rpx;
 }
 
 .location-area {
     display: flex;
     align-items: center;
-    padding: 12rpx 20rpx;
-    background: rgba(0, 0, 0, 0.04);
-    border-radius: 20rpx;
+    padding: 10rpx 18rpx;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 18rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.8);
 }
 
 .location-icon {
-    font-size: 22rpx;
+    font-size: 20rpx;
     margin-right: 6rpx;
 }
 
 .location-text {
     font-size: 24rpx;
-    color: #86868b;
+    color: #5a7a9a;
 }
 
 // 场景切换
 .scene-tabs {
     display: flex;
-    padding: 20rpx 28rpx;
+    padding: 16rpx 28rpx 20rpx;
     gap: 16rpx;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
 }
 
 .scene-tab {
@@ -514,34 +515,37 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24rpx;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 14rpx;
+    padding: 22rpx;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.6);
     transition: all 0.3s ease;
 
     &.active {
-        background: #fff;
-        box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08), 0 1rpx 3rpx rgba(0, 0, 0, 0.06);
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 4rpx 16rpx rgba(100, 150, 200, 0.15);
+        border-color: rgba(255, 255, 255, 0.9);
 
         .tab-text {
-            color: #1d1d1f;
+            color: #2c3e50;
             font-weight: 600;
         }
     }
 
     &:not(.active):active {
         transform: scale(0.97);
+        background: rgba(255, 255, 255, 0.5);
     }
 }
 
 .tab-icon {
-    font-size: 30rpx;
+    font-size: 28rpx;
     margin-right: 10rpx;
 }
 
 .tab-text {
     font-size: 28rpx;
-    color: #86868b;
+    color: #7a9ab8;
     font-weight: 500;
 }
 
@@ -549,11 +553,12 @@ onMounted(() => {
 .selection-area {
     margin: 20rpx;
     padding: 28rpx;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-radius: 20rpx;
-    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    border-radius: 24rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4rpx 24rpx rgba(100, 150, 200, 0.1);
 }
 
 // 结果区域
@@ -573,29 +578,30 @@ onMounted(() => {
 }
 
 .section-icon {
-    font-size: 26rpx;
+    font-size: 24rpx;
     margin-right: 8rpx;
 }
 
 .section-title {
-    font-size: 30rpx;
+    font-size: 28rpx;
     font-weight: 600;
-    color: #1d1d1f;
+    color: #2c3e50;
 }
 
 .usage-tip {
     display: flex;
     align-items: flex-start;
-    padding: 20rpx 24rpx;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 14rpx;
+    padding: 18rpx 22rpx;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16rpx;
     margin-bottom: 20rpx;
+    border: 0.5rpx solid rgba(255, 255, 255, 0.6);
 }
 
 .tip-icon {
-    font-size: 22rpx;
+    font-size: 20rpx;
     margin-right: 10rpx;
     margin-top: 2rpx;
 }
@@ -603,21 +609,21 @@ onMounted(() => {
 .tip-content {
     flex: 1;
     font-size: 24rpx;
-    color: #86868b;
+    color: #7a9ab8;
     line-height: 1.6;
 }
 
 .disclaimer {
     text-align: center;
     font-size: 22rpx;
-    color: #86868b;
+    color: #9ab5cc;
     padding: 40rpx 0;
 }
 
 // 底部浮动按钮
 .fab-container {
     position: fixed;
-    bottom: calc(60rpx + env(safe-area-inset-bottom));
+    bottom: calc(80rpx + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -627,13 +633,16 @@ onMounted(() => {
 }
 
 .fab-btn {
-    width: 120rpx;
-    height: 120rpx;
-    border-radius: 60rpx;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.12), 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+    width: 116rpx;
+    height: 116rpx;
+    border-radius: 58rpx;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    box-shadow: 0 6rpx 32rpx rgba(100, 150, 200, 0.25),
+                0 2rpx 8rpx rgba(100, 150, 200, 0.1),
+                inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
+    border: 0.5rpx solid rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -641,40 +650,42 @@ onMounted(() => {
 
     &:active {
         transform: scale(0.92);
-        box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2rpx 16rpx rgba(100, 150, 200, 0.2);
     }
 
     &.is-regenerate {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.75);
     }
 
     &.loading {
-        opacity: 0.8;
+        opacity: 0.85;
     }
 }
 
 .fab-icon {
-    font-size: 48rpx;
+    font-size: 44rpx;
 }
 
 .fab-label {
     margin-top: 12rpx;
     font-size: 24rpx;
-    color: #86868b;
+    color: #7a9ab8;
     font-weight: 500;
 }
 
 .share-fab {
     position: absolute;
-    right: -100rpx;
-    top: 10rpx;
-    width: 80rpx;
-    height: 80rpx;
-    border-radius: 40rpx;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: 0 2rpx 16rpx rgba(0, 0, 0, 0.1);
+    right: -90rpx;
+    top: 16rpx;
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 36rpx;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    box-shadow: 0 4rpx 20rpx rgba(100, 150, 200, 0.2),
+                inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
+    border: 0.5rpx solid rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -685,14 +696,14 @@ onMounted(() => {
 }
 
 .share-icon {
-    font-size: 36rpx;
+    font-size: 32rpx;
 }
 
 .loading-spinner {
-    width: 40rpx;
-    height: 40rpx;
-    border: 4rpx solid rgba(0, 0, 0, 0.1);
-    border-top-color: #1d1d1f;
+    width: 36rpx;
+    height: 36rpx;
+    border: 3rpx solid rgba(100, 150, 200, 0.2);
+    border-top-color: #5a8ec0;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
